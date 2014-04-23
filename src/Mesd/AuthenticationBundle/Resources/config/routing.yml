@@ -1,0 +1,15 @@
+account_register:
+    path:     /register
+    defaults: { _controller: MesdAuthenticationBundle:Account:register }
+
+account_create:
+    path:     /register/create
+    defaults: { _controller: MesdAuthenticationBundle:Account:create }
+
+MesdAuthenticationBundle_authuser:
+    resource: "@MesdAuthenticationBundle/Resources/config/routing/authuser.yml"
+    prefix:   /authuser
+
+MesdAuthenticationBundle_authrole:
+    resource: "@MesdAuthenticationBundle/Resources/config/routing/authrole.yml"
+    prefix:   /authrole

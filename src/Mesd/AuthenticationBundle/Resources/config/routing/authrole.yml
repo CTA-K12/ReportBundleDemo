@@ -1,0 +1,30 @@
+authrole:
+    pattern:  /
+    defaults: { _controller: "MesdAuthenticationBundle:AuthRole:index" }
+
+authrole_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "MesdAuthenticationBundle:AuthRole:show" }
+
+authrole_new:
+    pattern:  /new
+    defaults: { _controller: "MesdAuthenticationBundle:AuthRole:new" }
+
+authrole_create:
+    pattern:  /create
+    defaults: { _controller: "MesdAuthenticationBundle:AuthRole:create" }
+    requirements: { _method: post }
+
+authrole_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "MesdAuthenticationBundle:AuthRole:edit" }
+
+authrole_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "MesdAuthenticationBundle:AuthRole:update" }
+    requirements: { _method: post|put }
+
+authrole_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "MesdAuthenticationBundle:AuthRole:delete" }
+    requirements: { _method: post|delete }

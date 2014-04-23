@@ -1,0 +1,6 @@
+parameters:
+#    app_authentication.user_provider.class: Mesd\AuthenticationBundle\Security\User\AuthUserProvider
+
+services:
+#    app_authentication.user_provider:
+#        class: %app_authentication.user_provider.class%

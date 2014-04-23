@@ -1,0 +1,104 @@
+{# src/Mesd/Orcase/AppBundle/Resources/views/Index/modal.html.twig #}
+{% extends 'MesdPresentationBundle::splash.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
+{% endblock stylesheets %}
+
+{% block navbarContent %}
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        {% block appLogo %}
+            <a class="brand" href="{{ path('MesdReportDemoBundle_home') }}">
+                {# <img src="{{ asset('img/orcase-logo.png') }}" alt="Orcase"/> #}
+            </a>
+        {% endblock appLogo %}
+    </div>
+    
+    {% if app.user.username is defined %}
+        <div class="collapse navbar-collapse main-collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cases <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="fa fa-folder fa-fw"></span> Case Management</a></li>
+                        <li><a href="#"><span class="fa fa-plus fa-fw"></span> Create Referral</a></li>
+                        <li><a href="#"><span class="fa fa-check-circle-o fa-fw"></span> Contractor Status</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://localhost/orcase/index.php?q=admin"><span class="fa fa-tasks fa-fw"></span> Legacy Admin</a></li>
+                        <li><a href="{{ path('admin') }}"><span class="fa fa-dashboard fa-fw"></span> Admin</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Billing</a></li>
+                <li><a href="#">Reports</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="fa fa-question fa-fw"></span> Help</a></li>
+                        <li><a href="#"><span class="fa fa-info fa-fw"></span> Project Status</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <span class="pull-right">
+                <form id="search" class="navbar-form navbar-left navbar-search">
+                    <input type="text" class="form-control" placeholder="Search">
+                </form>
+                <ul class="nav navbar-nav navbar-right navbar-user-menu">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="{{ app.user.email|gravatar }}" title="{{ app.user.email }}" />{{ app.user.username }} <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><span class="fa fa-user fa-fw"></span> Profile <span class="text-muted pull-right">Ctrl+R</span></a></li>
+                            <li><a href="#"><span class="fa fa-cog fa-fw"></span> Settings <span class="text-muted pull-right">Ctrl+X</span></a></li>
+                            <li><a href="#"><span class="fa fa-sign-out fa-fw"></span> Logout <span class="text-muted pull-right">Ctrl+Q</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </span>
+         </div><!-- END nav-collapse -->
+    {% else %}
+        <div class="collapse navbar-collapse main-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">Login</a></li>
+            </ul>
+         </div><!-- END nav-collapse -->
+    {% endif %}
+{% endblock navbarContent %}
+
+{% block container %}
+
+    <div class="panel panel-splash panel-splash-medium">
+        <div class="panel-header">
+            {% block subtitle %}
+                {% if subtitle is defined %}
+                    <h1>{{ subtitle }}</h1>
+                {% elseif pagetitle is defined %}
+                    <h1>{{ pagetitle }}</h1>
+                {% else %}
+                    <h1>Some Title Here</h1>
+                {% endif %}
+            {% endblock subtitle %}
+        </div>
+        <div class="panel-body">
+            {% block panelBody %}
+                <p>i'm stuff and i go here</p>
+            {% endblock panelBody %}
+        </div>
+        <div class="panel-footer">
+            {% block panelFooter %}
+                <p>i'm more stuff and i go here</p>
+            {% endblock panelFooter %}
+        </div>
+    </div>
+
+{% endblock container %}

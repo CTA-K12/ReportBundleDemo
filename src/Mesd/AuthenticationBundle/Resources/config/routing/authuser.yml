@@ -1,0 +1,30 @@
+authuser:
+    pattern:  /
+    defaults: { _controller: "MesdAuthenticationBundle:AuthUser:index" }
+
+authuser_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "MesdAuthenticationBundle:AuthUser:show" }
+
+authuser_new:
+    pattern:  /new
+    defaults: { _controller: "MesdAuthenticationBundle:AuthUser:new" }
+
+authuser_create:
+    pattern:  /create
+    defaults: { _controller: "MesdAuthenticationBundle:AuthUser:create" }
+    requirements: { _method: post }
+
+authuser_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "MesdAuthenticationBundle:AuthUser:edit" }
+
+authuser_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "MesdAuthenticationBundle:AuthUser:update" }
+    requirements: { _method: post|put }
+
+authuser_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "MesdAuthenticationBundle:AuthUser:delete" }
+    requirements: { _method: post|delete }

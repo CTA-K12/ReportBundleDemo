@@ -1,0 +1,18 @@
+mesd_report_demo:
+    resource: "@MesdReportDemoBundle/Resources/config/routing.yml"
+    prefix:   /
+
+login:
+    path:   /login
+    defaults:  { _controller: MesdAuthenticationBundle:Security:login }
+
+login_check:
+    path:   /login_check
+    requirements: { _method: POST }
+
+logout:
+    path:   /logout
+
+MesdAuthenticationBundle:
+    resource: "@MesdAuthenticationBundle/Resources/config/routing.yml"
+    prefix:   /

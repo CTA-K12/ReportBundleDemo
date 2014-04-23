@@ -1,0 +1,7 @@
+parameters:
+#    mesd_report_demo.example.class: Mesd\ReportDemoBundle\Example
+
+services:
+#    mesd_report_demo.example:
+#        class: %mesd_report_demo.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

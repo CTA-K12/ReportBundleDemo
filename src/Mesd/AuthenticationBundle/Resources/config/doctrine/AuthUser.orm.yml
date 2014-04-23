@@ -1,0 +1,69 @@
+Mesd\AuthenticationBundle\Entity\AuthUser:
+    type: entity
+    table: auth_user
+    repositoryClass: Mesd\AuthenticationBundle\Entity\AuthUserRepository
+    inheritanceType: JOINED
+    discriminatorColumn:
+        name: discriminator
+        type: string
+    discriminatorMap:
+        auth_user:   AuthUser
+        report_user: Mesd\ReportDemoBundle\Entity\ReportUser
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        username:
+            column: username
+            type: string
+            length: 64
+            unique: true
+            nullable: false
+        password:
+            column: password
+            type: string
+            length: 64
+            unique: false
+            nullable: false
+        salt:
+            column: salt
+            type: string
+            length: 32
+            unique: false
+            nullable: false
+        email:
+            column: email
+            type: string
+            length: 64
+            unique: true
+            nullable: false
+        lastLogin:
+            column: last_login
+            type: datetime
+            unique: false
+            nullable: true
+        isActive:
+            column: is_active
+            type: boolean
+            unique: false
+            nullable: true
+        isLocked:
+            column: is_locked
+            type: boolean
+            unique: false
+            nullable: true
+    manyToMany:
+        roles:
+            targetEntity: AuthRole
+            inversedBy: users
+            joinTable:
+                name: auth_user__auth_role
+                joinColumns:
+                    user_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    role_id:
+                        referencedColumnName: id
+    lifecycleCallbacks: {  }

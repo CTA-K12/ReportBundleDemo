@@ -1,0 +1,45 @@
+parameters:
+    database_driver:   pdo_mysql
+    database_host:     127.0.0.1
+    database_port:     ~
+    database_name:     symfony
+    database_user:     root
+    database_password: ~
+
+    dev_database_driver:   pdo_mysql
+    dev_database_host:     127.0.0.1
+    dev_database_port:     ~
+    dev_database_name:     symfony
+    dev_database_user:     root
+    dev_database_password: ~
+
+    mailer_transport:  smtp
+    mailer_host:       127.0.0.1
+    mailer_user:       ~
+    mailer_password:   ~
+
+    locale:            en
+    secret:            ThisTokenIsNotSoSecretChangeIt
+
+    node_base_path: /usr/bin/node
+    node_lib_path: /usr/include/node
+    node_modules_path: /lib/node_modules
+
+    app_name:          Report Demo
+    app_abbreviation:  Report Demo
+    app_description:   Demo and test bed for the jasper report bundle
+    app_keywords:      Jasper Report Demo
+    app_url:           localhost
+    app_version:       1
+    app_build:         0
+    app_release:       0
+    app_license_1:     MIT
+    app_license_url_1: http://opensource.org/licenses/MIT
+    app_license_2:     MIT
+    app_license_url_2: http://opensource.org/licenses/MIT
+    org_name:          Multnomah Education Service District
+    org_abbreviation:  MESD
+    org_address:       11611 NE Ainsworth Cir | Portland, OR 97220
+    org_telephone:     503-255-1841
+    org_email:         mesd
+    org_url:           http://www.mesd.k12.or.us

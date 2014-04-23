@@ -1,0 +1,18 @@
+Mesd\ReportDemoBundle\Entity\ReportUser:
+    type: entity
+    table: report_user
+    repositoryClass: Mesd\ReportDemoBundle\Repository\ReportUserRepository
+    fields:
+        firstName:
+            column: first_name
+            type: string
+            length: 32
+            unique: false
+            nullable: true
+        lastName:
+            column: last_name
+            type: string
+            length: 32
+            unique: false
+            nullable: true
+    lifecycleCallbacks: {  }

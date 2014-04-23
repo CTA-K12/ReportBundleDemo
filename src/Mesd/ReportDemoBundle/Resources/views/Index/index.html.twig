@@ -1,0 +1,119 @@
+{# src/Mesd/Orcase/AppBundle/Resources/views/Index/index.html.twig #}
+{% extends '::index.html.twig' %}
+    
+{% block sidebar %}
+    {{ render(controller('MesdPresentationBundle:Default:sidebar', {
+        'route': app.request.get('_route'),
+        'menu': {
+            'Fuid Grid': {
+                'path': '#fluidGridSystem',
+                'title': 'fluid grid',
+                'icon': 'fa-desktop'
+            },
+            'Responsive': {
+                'path': '#responsive',
+                'title': 'responsive',
+                'icon': 'fa-mobile-phone'
+            },
+            'Typography': {
+                'path': '#typography',
+                'title': 'typography',
+                'icon': 'fa-font'
+            },
+            'Table': {
+                'path': '#tables',
+                'title': 'table',
+                'icon': 'fa-table'
+            },
+            'Form': {
+                'path': '#forms',
+                'title': 'form',
+                'icon': 'fa-list-alt'
+            }
+        }}))
+    }}
+{% endblock sidebar %}
+
+{% block main %}
+
+    {% set stuff = {
+            'Fuid Grid': {
+                'path': '#fluidGridSystem',
+                'title': 'fluid grid',
+                'icon': 'icon-desktop'
+            },
+            'Form': {
+                'path': '#forms',
+                'title': 'form',
+                'icon': 'icon-list-alt'
+            }
+        }
+    %}
+
+    {% set translatables = {'%name%': name} %}
+    <h1>{{ 'Welcome.user'|trans(translatables) }}!</h1>
+    <img src="{{ '40x40'|placeholder }}" title="placeholder" />
+    <p>You have X new case notes you can view.</p>
+    <p>Case ####### is ready to be closed.</p>
+    <p>You have X unreviewed private messages.</p>
+    <p>(x) clear messages</p>
+
+    <div class="row-fluid">
+        <div id="contract-menu" class="span4 widget">
+            <h3>Contracts</h3>
+            <ul class="nav">
+                <li>Manage contracts</li>
+                <li>Add new contract</li>
+            </ul>
+        </div><!-- END span4 -->
+
+        <div id="case-menu" class="span4 widget">
+            <h3>Cases</h3>
+            <ul class="nav">
+                <li>Manage cases</li>
+                <li>Add new case</li>
+            </ul>
+        </div><!-- END span4 -->
+
+        <div id="referral-menu" class="span4 widget">
+            <h3>Referrals</h3>
+            <ul class="nav">
+                <li>Manage referrals</li>
+                <li>Add new referral</li>
+            </ul>
+        </div><!-- END span4 -->
+    </div><!-- END row-fluid -->
+
+    <div class="row-fluid">
+        <div id="agency-menu" class="span4 widget">
+            <h3>Agencies/Divisions</h3>
+            <ul class="nav">
+                <li><a href="{{ path('agency') }}">Manage Agencies</a></li>
+                <li>Add new agency</li>
+                <hr/>
+                <li>Manage divisions</li>
+                <li>Add new division</li>
+            </ul>
+        </div><!-- END span4 -->
+
+        <div id="staff-menu" class="span4 widget">
+            <h3>Staff</h3>
+            <ul class="nav">
+                <li>Manage staff</li>
+                <li>Add new staff</li>
+            </ul>
+        </div><!-- END span4 -->
+
+        <div id="referral-menu" class="span4 widget">
+            <h3>Referrals</h3>
+            <ul class="nav">
+                <li>Manage referrals</li>
+                <li>Add new referral</li>
+            </ul>
+        </div><!-- END span4 -->
+    </div><!-- END row-fluid -->
+
+{% endblock main %}
+
+{% block toolbarBottomContent %}
+{% endblock toolbarBottomContent %}

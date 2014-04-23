@@ -1,0 +1,45 @@
+Mesd\AuthenticationBundle\Entity\AuthRole:
+    type: entity
+    table: auth_role
+    repositoryClass: Mesd\AuthenticationBundle\Entity\AuthRoleRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        shortName:
+            column: short_name
+            type: string
+            length: 32
+            unique: true
+            nullable: false
+        longName:
+            column: long_name
+            type: string
+            length: 64
+            unique: false
+            nullable: true
+        description:
+            column: description
+            type: text
+            unique: false
+            nullable: true
+        isActive:
+            column: is_active
+            type: boolean
+            unique: false
+            nullable: true
+    oneToMany:
+        children:
+            targetEntity: AuthRole
+            mappedBy: parent
+    manyToOne:
+        parent:
+            targetEntity: AuthRole
+            inversedBy: children
+    manyToMany:
+        users:
+            targetEntity: AuthUser
+            mappedBy: roles
+    lifecycleCallbacks: {  }
