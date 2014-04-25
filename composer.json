@@ -10,6 +10,14 @@
         {
             "type" : "vcs",
             "url" : "https://github.com/MESD/PresentationBundle.git"
+        },
+        {
+            "type" : "vcs",
+            "url" : "https://github.com/MESD/JasperClient.git"
+        },
+        {
+            "type" : "vcs",
+            "url" : "https://github.com/MESD/JasperReportBundle.git"
         }
     ],
     "require": {
@@ -28,7 +36,9 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
-        "mesd/presentation-bundle": "dev-master"
+        "mesd/presentation-bundle": "dev-master",
+        "mesd/jasper-client": "dev-report-bundle",
+        "mesd/jasper-report-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

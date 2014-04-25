@@ -14,8 +14,8 @@
             <span class="icon-bar"></span>
         </button>
         {% block appLogo %}
-            <a class="brand" href="{{ path('MesdOrcaseAppBundle_home') }}">
-                <img src="{{ asset('img/orcase-logo.png') }}" alt="Orcase"/>
+            <a class="brand" href="{{ path('MesdReportDemoBundle_home') }}">
+                <img src="{{ asset('bundles/mesdreportdemo/img/ortrac-logo-sm.png') }}" alt="ORTrac"/>
             </a>
         {% endblock appLogo %}
     </div>
@@ -23,46 +23,12 @@
     {% if app.user.username is defined %}
         <div class="collapse navbar-collapse main-collapse" id="navbar-main">
             <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cases <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#"><span class="fa fa-folder fa-fw"></span> Case Management</a></li>
-                        <li><a href="#"><span class="fa fa-plus fa-fw"></span> Create Referral</a></li>
-                        <li><a href="#"><span class="fa fa-check-circle-o fa-fw"></span> Contractor Status</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="https://localhost/orcase/index.php?q=admin"><span class="fa fa-tasks fa-fw"></span> Legacy Admin</a></li>
-                        <li><a href="{{ path('admin') }}"><span class="fa fa-dashboard fa-fw"></span> Admin</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Billing</a></li>
-                <li><a href="#">Reports</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{ path('MesdHelpWikiBundle_home') }}"><span class="fa fa-question fa-fw"></span> Help</a></li>
-                        <li><a href="#"><span class="fa fa-info fa-fw"></span> Project Status</a></li>
-                    </ul>
-                </li>
+                <li><a href="{{ path('MesdReportDemoBundle_reports_list') }}">Reports</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Documentation</a></li>
             </ul>
             <span class="pull-right">
-                <form id="search" class="navbar-form navbar-left navbar-search">
-                    <input type="search" class="form-control" placeholder="Search">
-                </form>
                 <ul class="nav navbar-nav navbar-right navbar-user-menu">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <span class="fa fa-envelope fa-fw"></span><span class="badge badge-error">4</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><span class="fa fa-user fa-fw"></span> Profile <span class="text-muted pull-right">Ctrl+R</span></a></li>
-                            <li><a href="#"><span class="fa fa-cog fa-fw"></span> Settings <span class="text-muted pull-right">Ctrl+X</span></a></li>
-                            <li><a href="#"><span class="fa fa-sign-out fa-fw"></span> Logout <span class="text-muted pull-right">Ctrl+Q</span></a></li>
-                        </ul>
-                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="{{ app.user.email|gravatar }}" title="{{ app.user.email }}" class="navbar-gravatar" />{{ app.user.username }} <b class="caret"></b></a>

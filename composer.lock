@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "4a7e6101720316ace2eff9adcc044d69",
+    "hash": "ca3e8dbeededad755ea2b011214b5cbe",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1166,6 +1166,71 @@
             "time": "2013-07-19 00:03:27"
         },
         {
+            "name": "mesd/jasper-client",
+            "version": "dev-report-bundle",
+            "target-dir": "JasperClient",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MESD/JasperClient.git",
+                "reference": "5d932562af10dc107cf684f47bf6e5aca9367b69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MESD/JasperClient/zipball/5d932562af10dc107cf684f47bf6e5aca9367b69",
+                "reference": "5d932562af10dc107cf684f47bf6e5aca9367b69",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JasperClient": "JasperClient/src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Jasper Client",
+            "support": {
+                "source": "https://github.com/MESD/JasperClient/tree/report-bundle",
+                "issues": "https://github.com/MESD/JasperClient/issues"
+            },
+            "time": "2014-04-23 16:09:17"
+        },
+        {
+            "name": "mesd/jasper-report-bundle",
+            "version": "dev-master",
+            "target-dir": "MESD/Jasper/ReportBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MESD/JasperReportBundle.git",
+                "reference": "9a81ba5a3193f5fbce2640dc6b5a6418c28ee6fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MESD/JasperReportBundle/zipball/9a81ba5a3193f5fbce2640dc6b5a6418c28ee6fa",
+                "reference": "9a81ba5a3193f5fbce2640dc6b5a6418c28ee6fa",
+                "shasum": ""
+            },
+            "require": {
+                "mesd/jasper-client": "dev-report-bundle"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "MESD\\Jasper\\ReportBundle": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Jasper Reports bundle",
+            "support": {
+                "source": "https://github.com/MESD/JasperReportBundle/tree/master",
+                "issues": "https://github.com/MESD/JasperReportBundle/issues"
+            },
+            "time": "2014-04-24 22:29:50"
+        },
+        {
             "name": "mesd/presentation-bundle",
             "version": "dev-master",
             "target-dir": "Mesd/PresentationBundle",
@@ -1216,16 +1281,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "1afc39690e7414412face1f8cbf67b73db34485c"
+                "reference": "65026b610f8c19e61d7242f600530677b0466aac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1afc39690e7414412face1f8cbf67b73db34485c",
-                "reference": "1afc39690e7414412face1f8cbf67b73db34485c",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/65026b610f8c19e61d7242f600530677b0466aac",
+                "reference": "65026b610f8c19e61d7242f600530677b0466aac",
                 "shasum": ""
             },
             "require": {
@@ -1280,7 +1345,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2014-04-20 16:41:26"
+            "time": "2014-04-24 13:29:03"
         },
         {
             "name": "phpoption/phpoption",
@@ -2020,7 +2085,9 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "mesd/presentation-bundle": 20
+        "mesd/presentation-bundle": 20,
+        "mesd/jasper-client": 20,
+        "mesd/jasper-report-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"

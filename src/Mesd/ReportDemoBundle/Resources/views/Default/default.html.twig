@@ -1,0 +1,17 @@
+{% extends '::index.html.twig' %}
+
+{% block sidebar %}
+    {{ render(controller('MesdPresentationBundle:Default:sidebar', {
+        'route': app.request.get('_route'),
+        'menu': {
+            'Welcome': {
+                'path': '#welcome',
+                'title': 'Welcome',
+                'icon': 'fa-comments-o'
+            }
+        }}))
+    }}
+{% endblock sidebar %}
+
+{% block toolbarBottomContent %}
+{% endblock toolbarBottomContent %}

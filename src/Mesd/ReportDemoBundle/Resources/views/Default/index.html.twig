@@ -1,1 +1,37 @@
-Welcome!
+{% extends 'MesdReportDemoBundle:Default:default.html.twig' %}
+
+{% set subtitle = 'Jasper Report Bundle' %}
+
+{% block sidebar %}
+    {{ render(controller('MesdPresentationBundle:Default:sidebar', {
+        'route': app.request.get('_route'),
+        'menu': {
+            'Introduction': {
+                'path': '#introduction',
+                'title': 'Introduction',
+                'icon': ''
+            },
+            'Requirements': {
+                'path': '#requirements',
+                'title': 'Requirements',
+                'icon': ''
+            },
+            'Installation': {
+                'path': '#installation',
+                'title': 'Installation',
+                'icon': ''
+            }
+        }}))
+    }}
+{% endblock sidebar %}
+
+{% block main %}
+    <h2>Introduction</h2>
+    <p>This project serves as a demo for the MESD Jasper Report Bundle and to also serve as a small project that can be used to test and development the bundle.  The MESD Jasper Report Bundle serves to make integrating the Jasper Report Server Community Edition and reports created with Jasper Studio into a Symfony an relatively simple task.</p>
+
+    <h2>Requirements</h2>
+    <p>The Jasper Report Bundle requires a version of Symfony >= 2.3 and a database that is managed by the Doctrine ORM, along with a running instance of Jasper Report Server that can be called by Symfony project that is making use of the Report Bundle</p>
+
+    <h2>Installation</h2>
+    <p>To configure the Jasper Report Bundle with your project ... </p>
+{% endblock main %}

@@ -43,3 +43,8 @@ parameters:
     org_telephone:     503-255-1841
     org_email:         mesd
     org_url:           http://www.mesd.k12.or.us
+
+    report_host: my_report_host
+    report_port: 8080
+    report_user: MyJasperServerAcct
+    report_pass: SuperSecretPassword

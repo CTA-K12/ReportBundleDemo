@@ -22,6 +22,22 @@ framework:
     fragments:       ~
     http_method_override: true
 
+#Jasper Report Bundle Configuration
+mesd_jasper_report:
+    options_handler: mesd_report_demo.handler.report_options
+    connection:
+        host: %report_host%
+        port: %report_port%
+        username: %report_user%
+        password: %report_pass%
+    folder_cache:
+        use_cache: true
+        cache_dir: ../app/cache/resource_cache/
+        cache_timeout: 30
+    report_cache:
+        use_cache: true
+        cache_dir: ../app/cache/report_cache
+
 # Twig Configuration
 twig:
     debug:            "%kernel.debug%"

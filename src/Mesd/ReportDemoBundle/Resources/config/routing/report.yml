@@ -1,0 +1,3 @@
+MesdReportDemoBundle_reports_list:
+    pattern:  /
+    defaults: { _controller: "MesdReportDemoBundle:Report:list" }

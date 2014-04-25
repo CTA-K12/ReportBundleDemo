@@ -1,0 +1,12 @@
+{
+    "name": "mesd-report-demo-bundle",
+    "version": "0.1",
+    "license": "MIT",
+    "private": "true",
+    "ignore": [
+
+    ],
+    "dependencies": {
+        "jstree": "3.0.0"
+    }
+}

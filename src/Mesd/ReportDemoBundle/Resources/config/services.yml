@@ -1,7 +1,7 @@
 parameters:
-#    mesd_report_demo.example.class: Mesd\ReportDemoBundle\Example
+    mesd_report_options_handler_class: Mesd\ReportDemoBundle\Services\ReportFormOptionsHandler
 
 services:
-#    mesd_report_demo.example:
-#        class: %mesd_report_demo.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    mesd_report_demo.handler.report_options:
+        class: %mesd_report_options_handler_class%
+        arguments: [  ]

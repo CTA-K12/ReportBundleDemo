@@ -1,3 +1,7 @@
-MesdReportDemoBundle_home:
-    pattern:  /
-    defaults: { _controller: MesdReportDemoBundle:Default:index }
+MesdReportDemoBundle_default:
+    resource: "@MesdReportDemoBundle/Resources/config/routing/default.yml"
+    prefix:   /
+
+MesdReportDemoBundle_reports:
+    resource: "@MesdReportDemoBundle/Resources/config/routing/report.yml"
+    prefix:   /reports
