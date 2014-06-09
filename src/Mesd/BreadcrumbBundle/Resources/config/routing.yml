@@ -1,3 +1,0 @@
-#MesdBreadcrumb_index:
-#    pattern:  /breadcrumb/{route}
-#    defaults: { _controller: MesdBreadcrumbBundle:Default:index, options: null }

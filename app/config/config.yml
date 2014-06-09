@@ -24,7 +24,7 @@ framework:
 
 #Jasper Report Bundle Configuration
 mesd_jasper_report:
-    options_handler: mesd_report_demo.handler.report_options
+    default_folder: /reports/ORMed
     connection:
         host: %report_host%
         port: %report_port%
@@ -36,7 +36,7 @@ mesd_jasper_report:
         cache_timeout: 30
     report_cache:
         use_cache: true
-        cache_dir: ../app/cache/report_cache
+        cache_dir: ../app/cache/report_cache/
 
 # Twig Configuration
 twig:
@@ -68,6 +68,7 @@ assetic:
     use_controller: false
     bundles:
         - MesdPresentationBundle
+        - MesdJasperReportViewerBundle
     filters:
         cssrewrite: ~
         cssembed:

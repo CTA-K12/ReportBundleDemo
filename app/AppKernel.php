@@ -22,8 +22,8 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Mesd\PresentationBundle\MesdPresentationBundle(),
             new Mesd\AuthenticationBundle\MesdAuthenticationBundle(),
-            new Mesd\BreadcrumbBundle\MesdBreadcrumbBundle(),
-            new MESD\Jasper\ReportBundle\MESDJasperReportBundle(),
+            new Mesd\Jasper\ReportBundle\MesdJasperReportBundle(),
+            new Mesd\Jasper\ReportViewerBundle\MesdJasperReportViewerBundle(),
             new Mesd\ReportDemoBundle\MesdReportDemoBundle(),
         );
 

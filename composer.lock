@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ca3e8dbeededad755ea2b011214b5cbe",
+    "hash": "fe8d17de0f888851b9e16256e5466b37",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -221,16 +221,16 @@
         },
         {
             "name": "doctrine/common",
-            "version": "v2.4.1",
+            "version": "v2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "ceb18cf9b0230f3ea208b6238130fd415abda0a7"
+                "reference": "5db6ab40e4c531f14dad4ca96a394dfce5d4255b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/ceb18cf9b0230f3ea208b6238130fd415abda0a7",
-                "reference": "ceb18cf9b0230f3ea208b6238130fd415abda0a7",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/5db6ab40e4c531f14dad4ca96a394dfce5d4255b",
+                "reference": "5db6ab40e4c531f14dad4ca96a394dfce5d4255b",
                 "shasum": ""
             },
             "require": {
@@ -240,6 +240,9 @@
                 "doctrine/inflector": "1.*",
                 "doctrine/lexer": "1.*",
                 "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
             },
             "type": "library",
             "extra": {
@@ -292,7 +295,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2013-09-07 10:20:34"
+            "time": "2014-05-21 19:28:51"
         },
         {
             "name": "doctrine/dbal",
@@ -1172,12 +1175,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MESD/JasperClient.git",
-                "reference": "5d932562af10dc107cf684f47bf6e5aca9367b69"
+                "reference": "59f6f952715e2d9038fccae73ca9bb9f7dd17b9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MESD/JasperClient/zipball/5d932562af10dc107cf684f47bf6e5aca9367b69",
-                "reference": "5d932562af10dc107cf684f47bf6e5aca9367b69",
+                "url": "https://api.github.com/repos/MESD/JasperClient/zipball/59f6f952715e2d9038fccae73ca9bb9f7dd17b9c",
+                "reference": "59f6f952715e2d9038fccae73ca9bb9f7dd17b9c",
                 "shasum": ""
             },
             "type": "library",
@@ -1194,21 +1197,21 @@
                 "source": "https://github.com/MESD/JasperClient/tree/report-bundle",
                 "issues": "https://github.com/MESD/JasperClient/issues"
             },
-            "time": "2014-04-23 16:09:17"
+            "time": "2014-05-22 00:18:35"
         },
         {
             "name": "mesd/jasper-report-bundle",
             "version": "dev-master",
-            "target-dir": "MESD/Jasper/ReportBundle",
+            "target-dir": "Mesd/Jasper/ReportBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MESD/JasperReportBundle.git",
-                "reference": "9a81ba5a3193f5fbce2640dc6b5a6418c28ee6fa"
+                "reference": "016cbfcb3efd65aa9e1238babcec46655b788638"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MESD/JasperReportBundle/zipball/9a81ba5a3193f5fbce2640dc6b5a6418c28ee6fa",
-                "reference": "9a81ba5a3193f5fbce2640dc6b5a6418c28ee6fa",
+                "url": "https://api.github.com/repos/MESD/JasperReportBundle/zipball/016cbfcb3efd65aa9e1238babcec46655b788638",
+                "reference": "016cbfcb3efd65aa9e1238babcec46655b788638",
                 "shasum": ""
             },
             "require": {
@@ -1217,7 +1220,7 @@
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
-                    "MESD\\Jasper\\ReportBundle": ""
+                    "Mesd\\Jasper\\ReportBundle": ""
                 }
             },
             "license": [
@@ -1228,7 +1231,42 @@
                 "source": "https://github.com/MESD/JasperReportBundle/tree/master",
                 "issues": "https://github.com/MESD/JasperReportBundle/issues"
             },
-            "time": "2014-04-24 22:29:50"
+            "time": "2014-05-30 18:33:18"
+        },
+        {
+            "name": "mesd/jasper-report-viewer-bundle",
+            "version": "dev-master",
+            "target-dir": "Mesd/Jasper/ReportViewerBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MESD/JasperReportViewerBundle.git",
+                "reference": "faa0ae6f8df31be82d308d61fb8a5a2ec69c43c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MESD/JasperReportViewerBundle/zipball/faa0ae6f8df31be82d308d61fb8a5a2ec69c43c0",
+                "reference": "faa0ae6f8df31be82d308d61fb8a5a2ec69c43c0",
+                "shasum": ""
+            },
+            "require": {
+                "mesd/jasper-client": "dev-report-bundle",
+                "mesd/jasper-report-bundle": "dev-master"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Mesd\\Jasper\\ReportViewerBundle": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Adds a viewer element to work with the mesd/jasper-report-bundle",
+            "support": {
+                "source": "https://github.com/MESD/JasperReportViewerBundle/tree/master",
+                "issues": "https://github.com/MESD/JasperReportViewerBundle/issues"
+            },
+            "time": "2014-05-30 21:10:03"
         },
         {
             "name": "mesd/presentation-bundle",
@@ -1237,12 +1275,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MESD/PresentationBundle.git",
-                "reference": "280a4947a6e67dfac87d2cb667f7682390cc85b8"
+                "reference": "fbbced6570d001ef7b40c691cb5b95aba25ed6d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MESD/PresentationBundle/zipball/280a4947a6e67dfac87d2cb667f7682390cc85b8",
-                "reference": "280a4947a6e67dfac87d2cb667f7682390cc85b8",
+                "url": "https://api.github.com/repos/MESD/PresentationBundle/zipball/fbbced6570d001ef7b40c691cb5b95aba25ed6d4",
+                "reference": "fbbced6570d001ef7b40c691cb5b95aba25ed6d4",
                 "shasum": ""
             },
             "require": {
@@ -1266,7 +1304,7 @@
                     "email": "chanson@mesd.k12.or.us"
                 }
             ],
-            "description": "Mesd Presentation Bundle for Symfony2",
+            "description": "MESD Presentation Bundle for Symfony2",
             "homepage": "http://github.com/Mesd/PresentationBundle",
             "keywords": [
                 "bundle",
@@ -1277,7 +1315,7 @@
                 "source": "https://github.com/MESD/PresentationBundle/tree/master",
                 "issues": "https://github.com/MESD/PresentationBundle/issues"
             },
-            "time": "2014-04-22 23:39:25"
+            "time": "2014-05-22 00:27:19"
         },
         {
             "name": "monolog/monolog",
@@ -1583,25 +1621,28 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.1.0",
+            "version": "v5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "748c01c1144713ac0118396935d10b6ceec91b68"
+                "reference": "043e336b871f17a117f76ef8e190eddfc04c8d48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/748c01c1144713ac0118396935d10b6ceec91b68",
-                "reference": "748c01c1144713ac0118396935d10b6ceec91b68",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/043e336b871f17a117f76ef8e190eddfc04c8d48",
+                "reference": "043e336b871f17a117f76ef8e190eddfc04c8d48",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
+            "require-dev": {
+                "mockery/mockery": "~0.9.1"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.1-dev"
+                    "dev-master": "5.2-dev"
                 }
             },
             "autoload": {
@@ -1630,7 +1671,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2014-03-18 09:03:27"
+            "time": "2014-05-08 08:11:19"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -1862,16 +1903,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.3.12",
+            "version": "v2.3.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "3574df3d5e0039f3225007b8be534df5c4104503"
+                "reference": "424a567d2c1fb918a32f302b5c2bcb67d2661e76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/3574df3d5e0039f3225007b8be534df5c4104503",
-                "reference": "3574df3d5e0039f3225007b8be534df5c4104503",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/424a567d2c1fb918a32f302b5c2bcb67d2661e76",
+                "reference": "424a567d2c1fb918a32f302b5c2bcb67d2661e76",
                 "shasum": ""
             },
             "require": {
@@ -1968,7 +2009,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-04-03 05:42:39"
+            "time": "2014-05-22 17:23:49"
         },
         {
             "name": "twig/extensions",
@@ -2087,7 +2128,8 @@
     "stability-flags": {
         "mesd/presentation-bundle": 20,
         "mesd/jasper-client": 20,
-        "mesd/jasper-report-bundle": 20
+        "mesd/jasper-report-bundle": 20,
+        "mesd/jasper-report-viewer-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"

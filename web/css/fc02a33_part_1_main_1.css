@@ -1,0 +1,4 @@
+.jstree-container-ul,
+.jstree-container-ul ul {
+    list-style-type: none;
+}

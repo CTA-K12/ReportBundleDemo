@@ -2,11 +2,11 @@
 
 namespace Mesd\ReportDemoBundle\Services;
 
-use MESD\Jasper\ReportBundle\Interfaces\OptionsHandlerInterface;
-use MESD\Jasper\ReportBundle\InputControl\AbstractReportBundleInputControl;
-use MESD\Jasper\ReportBundle\InputControl\Option;
+use Mesd\Jasper\ReportBundle\Interfaces\AbstractOptionsHandler;
+use Mesd\Jasper\ReportBundle\InputControl\AbstractReportBundleInputControl;
+use Mesd\Jasper\ReportBundle\InputControl\Option;
 
-class ReportFormOptionsHandler implements OptionsHandlerInterface
+class ReportFormOptionsHandler extends AbstractOptionsHandler
 {
     ///////////////
     // VARIABLES //
@@ -48,15 +48,15 @@ class ReportFormOptionsHandler implements OptionsHandlerInterface
      *           B: return an empty array to give the user no options to select from
      *           C: return null to inidicate that this method does not handle the requested input type (such that fallback can takeover)
      *
-     * @param  AbstractReportBundleInputControl $inputControl The input control to generate options for
+     * @param  string     $inputControl The id of the input control to check for options of
      *
-     * @return array|null                                     The array of options or null
+     * @return array|null               The array of options or null
      */
-    public function getList(AbstractReportBundleInputControl $inputControl) {
+    public function getList($inputControlId) {
         //Check if the input control id is in the function map
-        if (array_key_exists($inputControl->getId(), $this->functionMap)) {
+        if (array_key_exists($inputControlId, $this->methodMap)) {
             //call the function
-            $options = call_user_func(array($this, $this->functionMap[$inputControl->getId()]));
+            $options = call_user_func(array($this, $this->methodMap[$inputControlId]));
         } else {
             //Set options to null (this way fallback mode will know to go ask Jasper for the options)
             $options = null;

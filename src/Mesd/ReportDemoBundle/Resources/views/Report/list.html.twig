@@ -3,13 +3,5 @@
 {% set subtitle = 'Reports' %}
 
 {% block main %}
-    <ul>
-    {% for resource in resources %}
-        {% if 'folder' == resource.wsType %}
-            <li><a class="mrd-folder" href="#"><span class="fa fa-folder"> </span> {{ resource.label }}</a></li>
-        {% else %}
-            <li><a class="mrd-report" href="#"><span class="fa fa-file"> </span> {{ resource.label }}</a></li>
-        {% endif %}
-    {% endfor %}
-    </ul>
+    <div id="jstree" data-url="{{ url('MesdReportDemoBundle_reports_list_json') }}"></div>
 {% endblock main %}

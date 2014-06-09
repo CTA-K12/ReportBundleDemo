@@ -1,0 +1,9 @@
+{% extends 'MesdReportDemoBundle:Report:report.html.twig' %}
+
+{% set subtitle = 'Report View' %}
+
+{% block main %}
+    {{ mesd_report_render_page_links(report, 'MesdReportDemoBundle_reports_display_page') }}
+    {{ mesd_report_render_export_links(report) }}
+    {{ mesd_report_render_output(report) }}
+{% endblock main %}

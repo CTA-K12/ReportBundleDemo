@@ -5,3 +5,7 @@ MesdReportDemoBundle_default:
 MesdReportDemoBundle_reports:
     resource: "@MesdReportDemoBundle/Resources/config/routing/report.yml"
     prefix:   /reports
+
+MesdReportDemoBundle_history:
+    resource: "@MesdReportDemoBundle/Resources/config/routing/history.yml"
+    prefix:   /history

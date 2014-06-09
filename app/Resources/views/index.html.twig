@@ -2,8 +2,22 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
+
+    {% stylesheets 'bundles/mesdreportdemo/css/*' filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
 {% endblock stylesheets %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {% javascripts 
+        '@MesdReportDemoBundle/Resources/public/vendor/jstree/dist/jstree.min.js'
+        '@MesdReportDemoBundle/Resources/public/js/folderTree.js'
+        %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock javascripts %}
 
 {% block navbarContent %}
     <div class="navbar-header">
@@ -23,8 +37,9 @@
     {% if app.user.username is defined %}
         <div class="collapse navbar-collapse main-collapse" id="navbar-main">
             <ul class="nav navbar-nav">
+                <li><a href="{{ path('MesdReportDemoBundle_home') }}">Home</a></li>
                 <li><a href="{{ path('MesdReportDemoBundle_reports_list') }}">Reports</a></li>
-                <li><a href="#">History</a></li>
+                <li><a href="{{ path('MesdReportDemoBundle_history_index') }}">History</a></li>
                 <li><a href="#">Documentation</a></li>
             </ul>
             <span class="pull-right">
@@ -51,7 +66,4 @@
 {% endblock navbarContent %}
 
 {% block toolbarTopLeftContent %}
-    <ul class="breadcrumb">
-        {{ include('MesdBreadcrumbBundle:Default:router.html.twig') }}
-    </ul>
 {% endblock toolbarTopLeftContent %}

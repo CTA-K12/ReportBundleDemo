@@ -17,6 +17,9 @@ MesdAuthenticationBundle:
     resource: "@MesdAuthenticationBundle/Resources/config/routing.yml"
     prefix:   /
 
-MesdBreadcrumbBundle:
-    resource: "@MesdBreadcrumbBundle/Resources/config/routing.yml"
-    prefix: /breadcrumb
+MESDJasperReportBundle:
+    resource: "@MesdJasperReportBundle/Resources/config/routing.yml"
+
+MESDJasperReportViewerBundle:
+    resource: "@MesdJasperReportViewerBundle/Resources/config/routing.yml"
+    prefix:   /reportviewer

@@ -1,3 +1,21 @@
 MesdReportDemoBundle_reports_list:
-    pattern:  /
+    pattern:  /list
     defaults: { _controller: "MesdReportDemoBundle:Report:list" }
+
+MesdReportDemoBundle_reports_list_json:
+    pattern:  /list/json
+    defaults: { _controller: "MesdReportDemoBundle:Report:listJson"}
+
+MesdReportDemoBundle_reports_form:
+    pattern:  /form/{reportUri}
+    defaults: { _controller: "MesdReportDemoBundle:Report:form" }
+
+MesdReportDemoBundle_reports_run:
+    pattern:  /run/{reportUri}
+    defaults: { _controller: "MesdReportDemoBundle:Report:run" }
+    requirements:
+        _method: post
+
+MesdReportDemoBundle_reports_display_page:
+    pattern:  /display/{requestId}/{page}
+    defaults: { _controller: "MesdReportDemoBundle:Report:displayPage" }

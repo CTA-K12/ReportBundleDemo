@@ -1,0 +1,3 @@
+MesdReportDemoBundle_history_index:
+    pattern:  /
+    defaults: { _controller: "MesdReportDemoBundle:History:index" }

@@ -1,0 +1,30 @@
+{% extends 'MesdReportDemoBundle:History:history.html.twig' %}
+
+{% block main %}
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Report</th>
+                <th>Date</th>
+                <th>User</th>
+                <th>Parameters</th>
+                <th>View</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for report in reports %}
+                <tr>
+                    <td>{{ mesd_jasper_reportviewer_report_link(report.reportUri, report.reportUri) }}</td>
+                    <td>{{ report.date|date('Y-m-d H:i:s') }}</td>
+                    <td>{{ report.username }}</td>
+                    <td>{{ report.parameters }}</td>
+                    <td>
+                        {{ mesd_jasper_reportviewer_stored_report_link(report.reportUri, report.requestId, 'html') }}
+                        <a href="{{ url('MesdJasperReportBundle_export_cached_report', { 'requestId': report.requestId, 'format': 'pdf' }) }}">pdf</a>
+                        <a href="{{ url('MesdJasperReportBundle_export_cached_report', { 'requestId': report.requestId, 'format': 'xls' }) }}">xls</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock main %}

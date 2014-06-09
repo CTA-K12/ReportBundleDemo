@@ -1,0 +1,10 @@
+reports:
+    _roles:
+        - ROLE_USER
+        - ROLE_ADMIN
+        - ROLE_SUPERADMIN
+    ORMed_Dev:
+        _roles:
+            - ROLE_USER
+            - ROLE_ADMIN
+            - ROLE_SUPERADMIN

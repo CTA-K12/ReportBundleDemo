@@ -1,7 +1,7 @@
 {% extends '::index.html.twig' %}
 
 {% block sidebar %}
-    {{ render(controller('MesdPresentationBundle:Default:sidebar', {
+    {# {{ render(controller('MesdPresentationBundle:Default:sidebar', {
         'route': app.request.get('_route'),
         'menu': {
             'List': {
@@ -10,5 +10,5 @@
                 'icon': 'fa-list'
             }
         }}))
-    }}
+    }} #}
 {% endblock sidebar %}
